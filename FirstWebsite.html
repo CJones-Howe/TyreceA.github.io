@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The World of Sports Betting</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 30px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .features, .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px auto;
+            max-width: 900px;
+        }
+
+        .feature-box, .link-box {
+            background-color: white;
+            margin: 20px;
+            padding: 30px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-box h3, .link-box h3 {
+            margin-bottom: 10px;
+            color: #007ACC;
+        }
+
+        .link-box a {
+            color: #007ACC;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-box:hover, .feature-box:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .content-section {
+            display: none;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            text-align: left;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sports Betting</h1>
+        <p>Explore insights, creativity, and facts about sports betting</p>
+        <a href="#features" class="btn">Explore Features</a>
+    </header>
+
+    <section id="features" class="features">
+        <div class="feature-box" onclick="showContent('availability')">
+            <h3>Availability</h3>
+            <p>Which states allow sports betting?</p>
+        </div>
+        <div class="feature-box" onclick="showContent('age')">
+            <h3>Age</h3>
+            <p>Minimum legal age for sports betting</p>
+        </div>
+        <div class="feature-box" onclick="showContent('apps')">
+            <h3>Apps</h3>
+            <p>Types of sports betting apps</p>
+        </div>
+    </section>
+
+    <section class="links">
+        <div class="link-box">
+            <h3>DraftKings</h3>
+            <a href="https://www.draftkings.com" target="_blank">Visit DraftKings</a>
+        </div>
+        <div class="link-box">
+            <h3>FanDuel</h3>
+            <a href="https://www.fanduel.com" target="_blank">Visit FanDuel</a>
+        </div>
+        <div class="link-box">
+            <h3>BetMGM</h3>
+            <a href="https://sports.betmgm.com" target="_blank">Visit BetMGM</a>
+        </div>
+    </section>
+
+    <!-- Expandable Content Sections -->
+    <section id="availability" class="content-section">
+        <h2>Availability</h2>
+        <p>Sports betting is legal in many states. Click <a href="https://www.pgatour.com/article/news/betting-dfs/2024/12/17/sports-betting-landscape-heading-into-2025-where-is-it-legal"_blank">here</a> to see a full list of where it is currently permitted.</p>
+    </section>
+
+    <section id="age" class="content-section">
+        <h2>Legal Age for Sports Betting</h2>
+        <p>In most states, the minimum age for legal sports betting is 21. However, some states may allow it at 18 depending on local laws.</p>
+    </section>
+
+    <section id="apps" class="content-section">
+        <h2>Betting Apps</h2>
+        <p>Popular apps include DraftKings, FanDuel, BetMGM, and Caesars Sportsbook. These apps allow you to place bets, view odds, and manage your account.</p>
+    </section>
+
+    <footer>
+        &copy; 2025 The World of Sports Betting. All rights reserved.
+    </footer>
+
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
